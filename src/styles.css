@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+ /*NAVIGATION*/
+ 
+ .navigation {
+     font-size: 22px;
+     background-color: #F2F2F2;
+     margin-right: auto;
+ }
+ 
+ .dropdown-menu {
+     font-size: 18px;
+ }
+ 
+ .dropdown-menu i {
+     padding-right: 10px;
+ }
+ 
+ .nav-item a {
+     color: #000000;
+ }
+ 
+ .nav-link i {
+     padding-right: 7px;
+ }
+ 
+ .navbar-brand {
+     color: black;
+ }
+ /*HOME*/
+ 
+ .home .row .card {
+     /*-webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75); */
+     border-radius: 20px 20px 20px 20px;
+ }
+ 
+ .home .card-header h5 {
+     text-align: center;
+     margin-bottom: 0px;
+ }
+ 
+ .home .card-header {
+     border-radius: 20px 20px 0px 0px;
+     background: rgba(241, 231, 103, 1);
+     background: -moz-linear-gradient(left, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241, 231, 103, 1)), color-stop(100%, rgba(254, 182, 69, 1)));
+     background: -webkit-linear-gradient(left, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+     background: -o-linear-gradient(left, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+     background: -ms-linear-gradient(left, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+     background: linear-gradient(to right, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1);
+ }
+ 
+ .home .btn {
+     background: rgba(76, 76, 76, 1);
+     background: -moz-linear-gradient(left, rgba(76, 76, 76, 1) 0%, rgba(71, 71, 71, 1) 100%);
+     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76, 76, 76, 1)), color-stop(100%, rgba(71, 71, 71, 1)));
+     background: -webkit-linear-gradient(left, rgba(76, 76, 76, 1) 0%, rgba(71, 71, 71, 1) 100%);
+     background: -o-linear-gradient(left, rgba(76, 76, 76, 1) 0%, rgba(71, 71, 71, 1) 100%);
+     background: -ms-linear-gradient(left, rgba(76, 76, 76, 1) 0%, rgba(71, 71, 71, 1) 100%);
+     background: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(71, 71, 71, 1) 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#474747', GradientType=1);
+ }
+ 
+ .flecha {
+     margin-left: 10px;
+ }
+ /*TABLAS*/
+ 
+ .table tr {
+     text-align: center;
+ }
+ 
+ .table tr .btn {
+     border-radius: 18px;
+ }
+ 
+ .table thead {
+     background-color: rgb(204, 193, 33);
+     text-align: center;
+ }
+ /*FORMULARIOS*/
+ 
+ .row h3 {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .row form {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .row .card {
+     -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+ }
+ 
+ .row h5 {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .row .card-header {
+     margin-bottom: 15px;
+ }
+ 
+ .row .card-header h3 {
+     padding-top: 10px;
+ }
+ 
+ .row {
+     border-radius: 50px;
+ }
+ 
+ .row .btn {
+     border-radius: 20px;
+ }
+ /* LISTADOS */
+ 
+ .table {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .titulos h4 {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     text-align: center;
+ }

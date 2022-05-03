@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS PEDIDO</h3>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail4">Sucursal</label>
+                        <input type="text" name="Sucursal" [(ngModel)]="pedido.nombre_sucursal"
+                            placeholder="Nombre Sucursal" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Proveedor</label>
+                        <input type="text" name="Proveedor" [(ngModel)]="pedido.nombre_prov"
+                            placeholder="Nombre Proveedor" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail4">Modelo Vehiculo</label>
+                        <input type="text" name="Vehiculo" [(ngModel)]="pedido.vehiculo" placeholder="Vehículo"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Valor </label>
+                        <input type="text" name="Valor Total" [(ngModel)]="pedido.valor_total" placeholder="$0.00"
+                            class="form-control">
+                    </div>
+
+
+                    <button class="btn btn-success btn-block" (click)="edit ? updatePedido() : saveNewPedido()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>
+                </div>
+                <h5> Sucursal: {{pedido.nombre_sucursal == ''? '': pedido.nombre_sucursal}} </h5>
+                <h5> Proveedor: {{pedido.nombre_prov == '' ? '': pedido.nombre_prov}} </h5>
+                <h5> Vehículo: {{pedido.vehiculo == '' ? '': pedido.vehiculo}} </h5>
+                <h5> V.Total: {{pedido.valor_total == '' ? '': pedido.valor_total}} </h5>
+            </div>
+        </div>
+    </div>
+</div>

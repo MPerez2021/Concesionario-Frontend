@@ -1,0 +1,39 @@
+
+<div class="table-responsive-xl">
+
+    <div class="titulos">
+        <h4>INFORME VEHÍCULOS</h4>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Color</th>
+                <th scope="col">Nº Placa/Chasis</th>
+                <th scope="col">Editar</th>  
+            </tr>
+        </thead>
+        <tbody *ngFor="let carro of cars; let indice=index">
+            <tr>
+                <th scope="row"> {{indice+1}} </th>
+                <td> {{carro.descripcion}}</td>
+                <td> {{carro.marca}} </td>
+                <td> {{carro.modelo}} </td>
+                <td> {{carro.precio}} </td>
+                <td> {{carro.color}} </td>
+                <td> {{carro.placa}} </td>
+                <td><a [routerLink]="['/cars/edit', carro.placa]" class="btn btn-info btn-xs">Editar</a></td>
+                <!-- <td><button class="btn btn-danger" (click)="deleteCarro(carro.placa)"><i
+                            class="far fa-trash-alt"></i></button></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/cars/add">
+        <td><button class="btn btn-primary">Añadir Vehículo</button></td>
+    </a>
+</div>

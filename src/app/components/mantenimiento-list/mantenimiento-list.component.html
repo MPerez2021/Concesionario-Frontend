@@ -1,0 +1,35 @@
+<div class="table-responsive-xl">
+    <div class="titulos">
+        <h4>LISTADO MANTENIMIENTOS</h4>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Empleado</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">IVA</th>
+                <th scope="col">Valor Total</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let mantenimiento of mantenimientos">
+            <tr>
+                <th scope="row">{{mantenimiento.cod_mant}}</th>
+                <td> {{mantenimiento.cedula_cliente}}</td>
+                <td> {{mantenimiento.cedula_empleado}} </td>
+                <td> {{mantenimiento.descripcion}} </td>
+                <td> {{mantenimiento.subtotal}} </td>
+                <td> {{mantenimiento.iva}} </td>
+                <td> {{mantenimiento.valor_total}} </td>
+                <td><a [routerLink]="['/mantenimientos/edit', mantenimiento.cod_mant]" class="btn btn-info btn-xs">Editar</a></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/mantenimientos/add">
+        <td><button class="btn btn-primary">Añadir Mantenimiento</button></td>
+    </a>
+</div>

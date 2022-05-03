@@ -1,0 +1,38 @@
+    <div class="table-responsive-xl">
+        <div class="titulos">
+            <h4>LISTADO FACTURAS</h4>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Empleado</th>
+                    <th scope="col">Metodo de Pago</th>
+                    <th scope="col">Sucursal</th>
+                    <th scope="col"># Factura</th>
+                    <th scope="col">Fecha emision</th>
+                    <th scope="col">Valor total</th>             
+                    <th scope="col">Editar</th> 
+                </tr>
+            </thead>
+            <tbody *ngFor="let factura of facturas; let indice=index">
+                <tr>
+                    <th scope="row">{{indice+1}}</th> 
+                    <td> {{factura.cedula_cliente}}</td>
+                    <td> {{factura.cedula_empleado}} </td>
+                    <td> {{factura.metodo_pago}} </td>
+                    <td> {{factura.nombre_sucursal}} </td>
+                    <td> {{factura.num_factura}} </td>  
+                    <td> {{factura.fecha_emision}} </td> 
+                    <td> {{factura.valor_total}} </td>  
+                    <td><a [routerLink]="['/facturas/edit', factura.num_factura]" class="btn btn-info btn-xs">Editar</a></td>
+                    <!-- <td><button class="btn btn-danger" (click)="deleteCarro(factura.num_factura)"><i class="far fa-trash-alt"></i></button></td> -->
+                </tr>
+            </tbody>
+        </table>
+        <a routerLink="/facturas/add">
+            <td><button class="btn btn-primary">Añadir Factura</button></td>
+        </a>
+    </div>
+    

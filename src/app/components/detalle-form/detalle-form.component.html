@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS DETALLE</h3>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail4"># Placa/ Chasis</label>
+                        <input type="text" name="Placa/Chasis" [(ngModel)]="detalle.placa_carro"
+                            placeholder="Placa/Chasis" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4"># Factura</label>
+                        <input type="text" name="Numero Factura" [(ngModel)]="detalle.numero_factura"
+                            placeholder="#Factura" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Cantidad</label>
+                        <input type="number" name="Cantidad" [(ngModel)]="detalle.cantidad" placeholder="Cantidad"
+                            class="form-control">
+                    </div>
+
+                    <button class="btn btn-success btn-block" (click)="edit ? updateDetalle() : saveNewDetalle()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>
+                </div>
+                <h5> # Placa/Chasis: {{detalle.placa_carro == ''? '': detalle.placa_carro}} </h5>
+                <h5> # Factura: {{detalle.numero_factura == '' ? '': detalle.numero_factura}} </h5>
+                <h5> Cantidad: {{detalle.cantidad == '' ? '': detalle.cantidad}} </h5>
+            </div>
+        </div>
+    </div>
+</div>

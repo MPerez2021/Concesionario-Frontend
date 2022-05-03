@@ -1,0 +1,86 @@
+<div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <a class="navbar-brand" routerLink="/">
+            <img src="assets/logo.png" width="150" height="85" class="d-inline-block align-top" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: black;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-friends"></i>Clientes
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/clients"><i class="fas fa-angle-right"></i>Listado</a>
+                        <a class="dropdown-item" routerLink="/clients/add"><i class="fas fa-angle-right"></i>Añadir Clientes</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-car"></i>Vehículos
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/cars"><i class="fas fa-angle-right"></i>Listado</a>
+                        <a class="dropdown-item" routerLink="/cars/add"><i class="fas fa-angle-right"></i>Añadir Vehículos</a>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-tools"></i>Mantenimiento
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/mantenimientos"><i class="fas fa-angle-right"></i>Listado</a>
+                        <a class="dropdown-item" routerLink="/mantenimientos/add"><i class="fas fa-angle-right"></i>Añadir Mantenimiento</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-map-marker-alt"></i>Sucursales
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/sucursales"><i class="fas fa-angle-right"></i>Listado</a>
+                        <a class="dropdown-item" routerLink="/sucursales/add"><i class="fas fa-angle-right"></i>Añadir Sucursales</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-money-check"></i>Factura
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/facturas"><i class="fas fa-angle-right"></i>Listado</a>
+                        <a class="dropdown-item" routerLink="/facturas/add"><i class="fas fa-angle-right"></i>Añadir Factura</a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item dropdown">
+
+                    <a class="nav-item nav-link mr-md-2" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"> 
+            Más Servicios<i class="flecha fas fa-arrow-circle-down"></i>
+          </a>
+                    <div class="dropdown-menu dropdown-menu-md-right">
+                        <a class="dropdown-item" routerLink="/empleados"><i class="fas fa-angle-right"></i>Empleados</a>
+                        <a class="dropdown-item" routerLink="/proveedores"><i class="fas fa-angle-right"></i>Proveedores</a>
+                        <a class="dropdown-item" routerLink="/detalles"><i class="fas fa-angle-right"></i>Detalle Factura</a>
+                        <a class="dropdown-item" routerLink="/pagos"><i class="fas fa-angle-right"></i>Métodos Pago</a>
+                        <a class="dropdown-item" routerLink="/pedidos"><i class="fas fa-angle-right"></i>Pedido Sucursales</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>

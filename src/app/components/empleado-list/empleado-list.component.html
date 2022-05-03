@@ -1,0 +1,43 @@
+<div class="table-responsive-xl">
+    <div class="titulos">
+        <h4>LISTA DE EMPLEADOS</h4>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr style="text-align: center;">
+                <th scope="col">#</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Género</th>
+                <th scope="col">Fecha Ingreso</th>
+                <th scope="col">Salario $</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let empleado of empleados; let indice=index">
+            <tr>
+                <th scope="row">{{indice+1}}</th>
+                <td> {{empleado.nombres}}</td>
+                <td> {{empleado.apellidos}} </td>
+                <td> {{empleado.cedula}} </td>
+                <td> {{empleado.telefono}} </td>
+                <td> {{empleado.email}} </td>
+                <td> {{empleado.direccion}} </td>
+                <td> {{empleado.genero}} </td>
+                <td> {{empleado.fecha_ingreso}} </td>
+                <td> {{empleado.salario}} </td>
+                <td><a [routerLink]="['/empleados/edit', empleado.cedula]" class="btn btn-info btn-xs">Editar</a>
+                </td>
+                <!-- <td><button class="btn btn-danger" (click)="deleteCarro(empleado.cedula)"><i
+                            class="far fa-trash-alt"></i></button></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/empleados/add">
+        <td><button class="btn btn-primary">Añadir Empleado</button></td>
+    </a>
+</div>

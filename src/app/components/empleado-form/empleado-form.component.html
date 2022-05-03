@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS EMPLEADO</h3>
+                    </div>                    
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label for="inputEmail4">Nombres</label>
+                        <input type="text" name="Nombres" [(ngModel)]="empleado.nombres" placeholder="Nombres"
+                            class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Apellidos</label>
+                        <input type="text" name="Apellidos" [(ngModel)]="empleado.apellidos" placeholder="Apellidos"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Cédula</label>
+                        <input type="text" name="Cedula" [(ngModel)]="empleado.cedula" placeholder="#Cédula"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Teléfono</label>
+                        <input type="text" name="Telefono" [(ngModel)]="empleado.telefono" placeholder="# Telefono"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Correo Electrónico</label>
+                        <input type="email" name="Email" [(ngModel)]="empleado.email" placeholder="ejemplo123@hotmail.com" 
+                            class="form-control">
+                    </div>   
+                    <div class="form-group">
+                        <label for="inputEmail4">Dirección</label>
+                        <input type="text" name="Direccion" [(ngModel)]="empleado.direccion" placeholder="Direccion"
+                            class="form-control">
+                    </div>  
+                    <div class="form-group">
+                        <label for="inputEmail4">Género</label>
+                        <input type="text" name="Genero" [(ngModel)]="empleado.genero" placeholder="M/F"
+                            class="form-control">
+                    </div>  
+                    <div class="form-group">
+                        <label for="inputEmail4">Fecha Ingreso</label>
+                        <input type="date" name="Fecha Ingreso" [(ngModel)]="empleado.fecha_ingreso" placeholder="Fecha Ingreso"
+                            class="form-control">
+                    </div> 
+                    <div class="form-group">
+                        <label for="inputEmail4">Salario</label>
+                        <input type="text" name="Salario" [(ngModel)]="empleado.salario" placeholder="Salario"
+                            class="form-control">
+                    </div>                        
+
+                    <button class="btn btn-success btn-block" (click)= "edit ? updateEmpleado() : saveNewEmpleado()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>                   
+                </div>
+                <h5> Nombres: {{empleado.nombres == ''? '': empleado.nombres}} </h5>
+                <h5> Apellidos: {{empleado.apellidos == '' ? '': empleado.apellidos}}  </h5>
+                <h5> Cédula: {{empleado.cedula == '' ? '': empleado.cedula}} </h5>
+                <h5> Teléfono: {{empleado.telefono == '' ? '': empleado.telefono}} </h5>
+                <h5> Email: {{empleado.email == '' ? '': empleado.email}}  </h5>    
+                <h5> Dirección: {{empleado.direccion == '' ? '': empleado.direccion}}  </h5>  
+                <h5> Género: {{empleado.genero == '' ? '': empleado.genero}}  </h5> 
+                <h5> Fecha Ingreso: {{empleado.fecha_ingreso == '' ? '': empleado.fecha_ingreso}}  </h5>
+                <h5> Salario: {{empleado.salario == '' ? '': empleado.salario}}  </h5>             
+            </div>
+        </div>
+    </div>
+</div>
+

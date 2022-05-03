@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS PROVEEDOR</h3>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail4">Proveedor</label>
+                        <input type="text" name="Nombre Proveedor" [(ngModel)]="proveedor.nombre" placeholder="Nombre Proveedor" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">E-mail</label>
+                        <input type="email" name="Email" [(ngModel)]="proveedor.email" placeholder="ejemplo123@hotmail.com" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Dirección</label>
+                        <input type="text" name="Direccion" [(ngModel)]="proveedor.direccion" placeholder="Av. 6 de Diciembre" class="form-control">
+                    </div>
+
+
+                    <button class="btn btn-success btn-block" (click)="edit ? updateProveedor() : saveNewProveedor()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>
+                </div>
+                <h5> Proveedor: {{proveedor.nombre == ''? '': proveedor.nombre}} </h5>
+                <h5> E-mail: {{proveedor.email == '' ? '': proveedor.email}} </h5>
+                <h5> Dirección: {{proveedor.direccion == '' ? '': proveedor.direccion}} </h5>
+            </div>
+        </div>
+    </div>
+</div>

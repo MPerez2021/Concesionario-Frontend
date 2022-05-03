@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-5 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS FACTURA</h3>
+                    </div> 
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label for="inputEmail4">#Cédula Cliente</label>
+                        <input type="text" name="Cliente" [(ngModel)]="factura.cedula_cliente" placeholder="# Cedula"
+                            class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">#Cédula Empleado</label>
+                        <input type="text" name="Empleado" [(ngModel)]="factura.cedula_empleado" placeholder="# Cedula"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Método de Pago</label>
+                        <input type="text" name="Metodo Pago" [(ngModel)]="factura.metodo_pago" placeholder="Efectivo/Tarjeta/Cheque"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Sucursal</label>
+                        <input type="text" name="Sucursal" [(ngModel)]="factura.nombre_sucursal" placeholder="Sucursal"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4"># Factura</label>
+                        <input type="email" name="Factura" [(ngModel)]="factura.num_factura" placeholder="# Factura" 
+                            class="form-control">
+                    </div>   
+                    <div class="form-group">
+                        <label for="inputEmail4">Fecha de Emisión</label>
+                        <input type="date" name="Fecha Emision" [(ngModel)]="factura.fecha_emision"
+                            class="form-control">
+                    </div>  
+                    <div class="form-group">
+                        <label for="inputEmail4">$ Valor total</label>
+                        <input type="text" name="Valor Total" [(ngModel)]="factura.valor_total" placeholder="$00.00"
+                            class="form-control">
+                    </div>                         
+
+                    <button class="btn btn-success btn-block" (click)= "edit ? updateFactura() : saveNewFactura()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div> 
+                </div>
+                <h5> # Cédula Cliente: {{factura.cedula_cliente == ''? '': factura.cedula_cliente}} </h5>
+                <h5> # Cedula Empleado:{{factura.cedula_empleado == '' ? '': factura.cedula_empleado}}  </h5>
+                <h5> Metodo Pago: {{factura.metodo_pago == '' ? '': factura.metodo_pago}} </h5>
+                <h5> Sucursal: {{factura.nombre_sucursal == '' ? '': factura.nombre_sucursal}} </h5>
+                <h5> Factura: {{factura.num_factura == '' ? '': factura.num_factura}}  </h5>    
+                <h5> Fecha Emision: {{factura.fecha_emision == '' ? '': factura.fecha_emision}}  </h5>  
+                <h5> Valor Total: {{factura.valor_total == '' ? '': factura.valor_total}}  </h5>              
+            </div>
+        </div>
+    </div>
+</div>
+

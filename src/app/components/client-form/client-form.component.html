@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS CLIENTE</h3>
+                    </div>                   
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label>Nombres</label> 
+                        <input type="text" name="Nombres" [(ngModel)]="cliente.nombres" placeholder="Nombres"
+                            class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label> 
+                        <input type="text" name="Apellidos" [(ngModel)]="cliente.apellidos" placeholder="Apellidos"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Cédula</label> 
+                        <input type="text" name="Cédula" [(ngModel)]="cliente.cedula" placeholder="#Cédula"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Género</label> 
+                        <input type="text" name="Género" [(ngModel)]="cliente.genero" placeholder="M/F"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label> 
+                        <input type="email" name="Email" [(ngModel)]="cliente.email"
+                            placeholder="ejemplo123@hotmail.com" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label> 
+                        <input type="text" name="Teléfono" [(ngModel)]="cliente.telefono" placeholder="0995841020"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección</label> 
+                        <textarea name="Dirección" [(ngModel)]="cliente.direccion" placeholder="Dirección" rows="2"
+                            class="form-control"></textarea>
+                    </div>
+
+                    <button class="btn btn-success btn-block" (click)="edit ? updateClient() : saveNewClient()">
+                        GUARDAR
+                    </button>  
+                    
+                    <button class="btn btn-success btn-block" (click)="saveNewClient2()">
+                        Añadir otro
+                    </button>  
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>                    
+                </div>
+                <h5> Nombres: {{cliente.nombres == ''? 'Nombres': cliente.nombres}}</h5>
+                <h5> Apellidos: {{cliente.apellidos == ''? 'Apellidos': cliente.apellidos}} </h5>
+                <h5> Cédula: {{cliente.cedula == ''? 'Cédula': cliente.cedula}} </h5>
+                <h5> Género: {{cliente.genero == ''? 'Género': cliente.genero}}</h5>
+                <h5> Email: {{cliente.email == ''? 'Email': cliente.email}} </h5>
+                <h5> Teléfono: {{cliente.telefono == ''? 'Teléfono': cliente.telefono}} </h5>
+                <h5> Dirección: {{cliente.direccion == ''? 'Dirección': cliente.direccion}} </h5>
+            </div>
+        </div>
+    </div>
+</div>

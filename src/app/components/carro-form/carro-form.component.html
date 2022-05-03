@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    
+                    <div class="card-header">
+                        <h3>DATOS CARRO</h3>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label>Descripción</label>
+                        <input type="text" name="Descripción" [(ngModel)]="carro.descripcion" placeholder="Auto Nuevo/Usado"
+                            class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <input type="text" name="Marca" [(ngModel)]="carro.marca" placeholder="Marca"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Modelo</label>
+                        <input type="text" name="Modelo" [(ngModel)]="carro.modelo" placeholder="Modelo"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Precio</label>
+                        <input type="text" name="Precio" [(ngModel)]="carro.precio" placeholder="$0.00"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Color</label>
+                        <input type="text" name="Color" [(ngModel)]="carro.color" placeholder="Color" 
+                            class="form-control">
+                    </div> 
+                    <div class="form-group">
+                        <label>#Placa/Chasis</label>
+                        <input type="text" name="Placa" [(ngModel)]="carro.placa" placeholder="Placa/Chasis" 
+                            class="form-control">
+                    </div>                                 
+
+                    <button class="btn btn-success btn-block" (click)= "edit ? updateCarro() : saveNewCarro()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div>                    
+                </div>
+                <h5> Descripción: {{carro.descripcion == ''? 'Descripción': carro.descripcion}} </h5>
+                <h5> Marca: {{carro.marca == '' ? 'Marca': carro.marca}}  </h5>
+                <h5> Modelo: {{carro.modelo == '' ? 'Modelo': carro.modelo}} </h5>
+                <h5> Precio: {{carro.precio == '' ? 'Precio': carro.precio}} </h5>
+                <h5> Color: {{carro.color == '' ? 'Color': carro.color}}  </h5>   
+                <h5> Placa: {{carro.placa == '' ? 'Placa': carro.placa}}  </h5>              
+            </div>
+        </div>
+    </div>
+</div>

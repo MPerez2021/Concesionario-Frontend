@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>DATOS SUCURSAL</h3>
+                    </div> 
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label for="inputEmail4">Sucursal</label>
+                        <input type="text" name="Nombre" [(ngModel)]="sucursal.nombre" placeholder="Nombre Sucursal"
+                            class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Teléfono</label>
+                        <input type="text" name="Telefono" [(ngModel)]="sucursal.telefono" placeholder="0912345670"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4">Dirección</label>
+                        <input type="text" name="Direccion" [(ngModel)]="sucursal.direccion" placeholder="Av. 6 de Diciembre"
+                            class="form-control">
+                    </div>                
+                                         
+
+                    <button class="btn btn-success btn-block" (click)= "edit ? updateSucursal() : saveNewSucursal()">
+                        GUARDAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-align">
+                <div class="text-center">
+                    <div class="card-header">
+                        <h3>Vista Previa</h3>
+                    </div> 
+                </div>
+                <h5> Sucursal: {{sucursal.nombre == ''? '': sucursal.nombre}} </h5>
+                <h5> Teléfono: {{sucursal.telefono == '' ? '': sucursal.telefono}}  </h5>
+                <h5> Dirección: {{sucursal.direccion == '' ? '': sucursal.direccion}} </h5>                         
+            </div>
+        </div>
+    </div>
+</div>
+
+

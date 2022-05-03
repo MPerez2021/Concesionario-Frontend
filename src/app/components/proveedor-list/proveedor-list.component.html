@@ -1,0 +1,29 @@
+<div class="table-responsive-xl">
+    <div class="titulos">
+        <h4>LISTADO PROVEEDORES</h4>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let proveedor of proveedores; let indice=index">
+            <tr>
+                <th scope="row">{{indice+1}}</th>
+                <td> {{proveedor.nombre}}</td>
+                <td> {{proveedor.email}} </td>
+                <td> {{proveedor.direccion}} </td>
+                <td><a [routerLink]="['/proveedores/edit', proveedor.nombre]" class="btn btn-info btn-xs">Editar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/proveedores/add">
+        <td><button class="btn btn-primary">Añadir Proveedor</button></td>
+    </a>
+</div>

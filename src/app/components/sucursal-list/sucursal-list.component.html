@@ -1,0 +1,33 @@
+<div class="table-responsive-xl">
+
+    <div class="titulos">
+        <h4> SUCURSALES</h4>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Contacto</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let sucursal of sucursales; let indice=index">
+            <tr>
+                <th scope="row">{{indice+1}}</th>
+                <td> {{sucursal.nombre}}</td>
+                <td> {{sucursal.telefono}} </td>
+                <td> {{sucursal.direccion}} </td>
+                <td><a [routerLink]="['/sucursales/edit', sucursal.nombre]" class="btn btn-info btn-xs">Editar</a>
+                </td>
+                <!-- <td><button class="btn btn-danger" (click)="deleteCarro(sucursal.nombre)"><i
+                            class="far fa-trash-alt"></i></button></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/sucursales/add">
+        <td><button class="btn btn-primary">Añadir Sucursal</button></td>
+    </a>
+</div>

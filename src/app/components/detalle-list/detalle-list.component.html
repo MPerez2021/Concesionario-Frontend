@@ -1,0 +1,37 @@
+    <div class="table-responsive-xl">
+
+        <div class="titulos">
+            <h4>LISTADO DETALLE FACTURA</h4>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nº Placa/Chasis</th>
+                    <th scope="col">Nº Factura</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th> 
+                    <th scope="col">Total</th>                               
+                    <th scope="col">Editar</th> 
+                </tr>
+            </thead>
+            <tbody *ngFor="let detalle of detalles">
+                <tr>
+                    <th scope="row">{{detalle.cod_detalle}}</th> 
+                    <td> {{detalle.placa_carro}}</td>
+                    <td> {{detalle.numero_factura}} </td>
+                    <td> {{detalle.precio}} </td>
+                    <td> {{detalle.cantidad}} </td>
+                    <td> {{detalle.precio_total}} </td>                      
+                    <td><a [routerLink]="['/detalles/edit', detalle.cod_detalle]" class="btn btn-info btn-xs">Editar</a></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <a routerLink="/detalles/add">
+            <td><button class="btn btn-primary">Añadir Detalle</button></td>
+        </a>
+    </div>
+    
+

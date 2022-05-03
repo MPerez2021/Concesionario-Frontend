@@ -1,0 +1,32 @@
+<div class="table-responsive-xl">
+    <div class="titulos">
+        <h4>LISTADO PEDIDOS</h4>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"># Pedido</th>
+                <th scope="col">Sucursal</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Vehículo Chevrolet</th>
+                <th scope="col">Valor Total</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let pedido of pedidos">
+            <tr>
+                <th scope="row">{{pedido.num_pedido}}</th>
+                <td> {{pedido.nombre_sucursal}}</td>
+                <td> {{pedido.nombre_prov}} </td>
+                <td> {{pedido.vehiculo}} </td>
+                <td> {{pedido.valor_total}} </td>
+                <td><a [routerLink]="['/pedidos/edit', pedido.num_pedido]" class="btn btn-info btn-xs">Editar</a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/pedidos/add">
+        <td><button class="btn btn-primary">Añadir Pedido</button></td>
+    </a>
+</div>
